@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main(){
+ int m ;
+ printf("Enter your marks ");
+ scanf("%d",&m);
+ 
+ switch(m)
+ {
+  case 75 ... 100:
+  printf("You have secured 1st Division ");
+  break;
+  
+  case 50 ... 74:
+  printf("You have secured 2nd Division ");
+  break;
+  
+  case 35 ... 49:
+  printf("You have secured 3rd Division ");
+  break;
+  
+  default:
+  printf("You have FAILED ");
+  break;
+  
+  }
+  return 0;
+  }
+  
