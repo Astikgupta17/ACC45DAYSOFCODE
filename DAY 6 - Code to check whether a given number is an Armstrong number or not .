@@ -1,0 +1,26 @@
+//ARMSTRONG NUMBERS**
+//For checking two digit and three digit numbers.
+
+#include<stdio.h>
+
+int main(){
+ int n,r,sum=0, result ;
+ printf("Enter the number ");
+ scanf("%d",&n);
+ 
+ result = n;
+ 
+ while(n>0){
+ 	r= n%10 ;
+	 sum+= (r*r*r); 
+	 n= n/10;
+ }
+ 
+  if(result==sum){
+  	printf("An armstrong number ");	
+  }
+  else{
+  	printf("Not an armstrong number ");
+  }
+  return 0;
+}
