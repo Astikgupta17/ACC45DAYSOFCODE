@@ -1,0 +1,23 @@
+ // Code to make a series out of summation of a set  every two previous consecutive even numbers.
+#include <stdio.h>
+int main()
+{
+int iNum, nSum;
+
+for(iNum=1, nSum=0; iNum<20; iNum++)
+{ // test value, 0 or non-zero
+
+if (iNum % 2)
+{
+printf("iNum %% 2 = %d (skipped)\n", iNum % 2);
+// executed if the test value is non-zero and repeat the for statement
+continue;
+}
+
+// executed if the test value is zero and repeat the for statement
+nSum = nSum + iNum;
+printf("iNum %% 2 = %d (summed up), nSum = %d \n", iNum % 2, nSum);
+}
+
+return 0;
+}
