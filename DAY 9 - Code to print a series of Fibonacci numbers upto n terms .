@@ -1,0 +1,21 @@
+//Code to print Fibonacci number series.
+
+#include<stdio.h>
+
+int main(){
+	int a=0,b=1,s,i=1,num;
+	printf("Enter the number of terms to be displayed ");
+	scanf("%d",&num);
+	printf("\n%d ,%d ",a,b);
+	for(i=3;i<=num;i++)
+   {
+    s=a+b; 
+	printf(",%d ",s);
+   
+    a=b;
+    b=s;
+	}
+ printf("\n Fibonacci series upto %d terms",num);
+   
+   return 0;
+}
