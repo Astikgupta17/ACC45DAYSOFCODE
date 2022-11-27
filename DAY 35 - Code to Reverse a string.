@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void RevString(char strg[])
+{
+    int g, numb;
+    int tmpry = 0;
+
+    for(numb=0; strg[numb] != 0; numb++);
+    for(g = 0; g <numb/2; g++)
+    {
+        tmpry = strg[g];
+        strg[g]=strg[numb - 1 - g];
+        strg[numb - 1 - g] = tmpry;
+    }
+    for(g = 0; g < numb; g++)
+        putchar(strg[g]);
+    printf(" \n ");
+}
+
+int main(void)
+{
+    char strg[60]; 
+    printf("Please insert the string you wish to get reversed: ");
+    scanf("%s", strg); 
+    RevString(strg);
+    return 0;
+}
