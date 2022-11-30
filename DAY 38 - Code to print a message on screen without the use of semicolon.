@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+void main() {
+
+    //Method I
+    if(printf("Hello world"))
+    {
+    } 
+    
+    //Method II
+    while(!printf("Hello world"))
+    {
+    }
+    
+    //Method III
+    switch(printf("Hello world"))
+    {
+    }
+
+}
