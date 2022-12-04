@@ -1,0 +1,28 @@
+#include <stdio.h>
+int line(void); 
+
+void main() {
+  int n, c = 0, sum = 0;
+  float avg;
+  
+  printf("Enter some text or sentence per line below:\n");
+  
+  /* Reading the text by line and updating the cumulative counters. */
+  while ((n = line()) > 0) {
+    sum += n;
+    ++c;
+  }
+  avg = (float) sum / c;
+  printf("\nAverage number of characters per line : %5.2f", avg);
+}
+
+
+int line(void)
+/* Reading a line of text and counting the number of characters. */
+{
+  char l[80];
+  int c = 0;
+  while ((l[c] = getchar()) != '\n')
+    ++c;
+  return (c);
+}
